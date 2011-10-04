@@ -1,0 +1,65 @@
+Steps:
+
+a. Setting up a local repo:
+
+cd C:
+mkdir NewProject
+cd NewProject
+Now from Git Bash run:
+git init
+
+b. Create a new file (for example new.txt)
+
+c. check the status using 
+
+git status
+
+d. stage the file for the next commit
+
+git add new.txt
+
+e. commit the newly created file to the local repo
+
+git commit -m "my new file".
+
+f. run the 
+
+git status 
+
+agin to check if the new file is commited - this means the working directory will be clean.
+
+g. Add the remote repo 
+
+git remote add origin git@github.com:duraiselvaa/Sample-MVC.git
+
+f. Now merge the remote changes, using 
+
+git pull git@github.com:duraiselvaa/Sample-MVC.git
+
+this will pull any remote changes done by the owner or others. you will see some result like:
+
+From github.com:duraiselvaa/Sample-MVC
+ * branch            HEAD       -> FETCH_HEAD
+Merge made by recursive.
+ NewTextFileAdded.txt |    1 +
+ README.txt           |   51 +++++++++++++++++++++++++++++++++++++++++++------
+ 2 files changed, 45 insertions(+), 7 deletions(-)
+ create mode 100644 NewTextFileAdded.txt
+
+
+g. Now push your local changes using:
+
+git push origin master
+
+Every time when we try to push or pull it will ask for your git password:
+
+Enter passphrase for key '/c/Users/Others/.ssh/id_rsa':
+Counting objects: 12, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (10/10), 1.43 KiB, done.
+Total 10 (delta 1), reused 0 (delta 0)
+To git@github.com:duraiselvaa/Sample-MVC.git
+   e8225d2..f1d13bc  master -> master
+
+now the local changes are commited to the remote repo.

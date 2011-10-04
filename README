@@ -1,1 +1,53 @@
-Hello World
+1. Download and install Maven 2
+2. Download and install git in your local - follow the instructions from: http://help.github.com/win-set-up-git/
+3. Create a local Repo 
+
+- Open GitBash
+- from the local directory of your choice, run the following commands to create a new Git Repo
+
+	mkdir NewProject
+	cd NewProject
+	git init
+
+this would have created a local Git Repository named "NewProject" with a .git folder.
+
+3. Pull the code from Github to your local:
+
+   - use the GitBash
+   - go to the local repository folder
+   - run the command:
+
+$ git pull https://github.com/duraiselvaa/Sample-MVC.git
+
+This will fetch the latest code from the HEAD.
+
+
+
+remote: Counting objects: 78, done.
+remote: Compressing objects: 100% (59/59), done.
+remote: Total 78 (delta 12), reused 74 (delta 11)
+Unpacking objects: 100% (78/78), done.
+From https://github.com/duraiselvaa/Sample-MVC
+ * branch            HEAD       -> FETCH_HEAD
+
+
+4.Download and install MYSQL 5.5.
+5. create a new DB Schema. 
+6. From your local reporsitory find the db script file located at:
+
+<localRepo>/Sample/src/main/resources/DB_Script.sql
+
+run the sql scripts in this file to create the required tables - user, property.
+
+7.  Update the db.xml file with your DB URL, username, password.
+
+<localRepo>/Sample/src/main/webapp/WEB-INF/spring/db.xml
+
+(search for the bean named "myDataSource" to update these DB attribute values)
+
+8. From your <localRepo>/Sample folder run the command mvn clean install
+9. you can find the the resulting war file "wm.war" at: <localRepo>/Sample/target folder.
+
+this is ready to be deployed in your j2ee container (tomcat, glassfish etc.)
+
+

@@ -1,0 +1,93 @@
+
+Please refer to the SetUp-localRepo-AddNewFile.txt file for setting up local repo and how to pull the files and merge etc. 
+
+Steps to delete the files:
+
+
+a. After setting up the local repo and pulling the contents we cna delete the files from the file system as usual.
+
+b. open the GitBash, go to the local repo folder. 
+
+use:  git status 
+
+to check the changes made. You will see something like:
+
+# On branch master
+# Changes not staged for commit:
+#   (use "git add/rm <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#       deleted:    NewTextFileAdded.txt
+#       deleted:    newDocument.txt
+#       deleted:    sample.txt
+
+
+c. Now we have to stage the changes to commit.
+
+$ git rm  NewTextFileAdded.txt
+
+$ git rm newDocument.txt
+
+$ git rm sample.txt
+
+
+d. Use: 
+
+$ git status 
+
+to check the status again.
+
+e. commit the deletion using: git commit -m "comments-about-the-reason-for-deletion"
+
+the result would be something like:
+
+[master c81e033] deleting the sample text files
+ 3 files changed, 0 insertions(+), 9 deletions(-)
+ delete mode 100644 NewTextFileAdded.txt
+ delete mode 100644 newDocument.txt
+ delete mode 100644 sample.txt
+ 
+ 
+f. push the changes to the remote repository
+ 
+$ git push origin master
+
+you will be asked to enter your password for github.
+
+Enter passphrase for key '/c/Users/Others/.ssh/id_rsa':
+
+then the files will be pushed to the remote repo.
+
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 233 bytes, done.
+Total 2 (delta 1), reused 0 (delta 0)
+To git@github.com:duraiselvaa/Sample-MVC.git
+   d15e066..c81e033  master -> master
+ 
+ 
+g. at any stage if there are changes in the remote repo, then you will get to see an error message like:
+
+To git@github.com:duraiselvaa/Sample-MVC.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'git@github.com:duraiselvaa/Sample-MVC.git'
+To prevent you from losing history, non-fast-forward updates were rejected
+Merge the remote changes (e.g. 'git pull') before pushing again.  See the
+'Note about fast-forwards' section of 'git push --help' for details.
+
+
+So we need to pull the changes first, using 
+
+$ git pull URL
+
+this will pull all the changes and merge it as well. 
+
+if there are any conflicts then we need to resolve them. then we can push the changes again. 
+
+
+
+
+
+
+

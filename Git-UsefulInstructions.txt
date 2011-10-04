@@ -1,0 +1,18 @@
+Useful URLS:
+
+1. Setting up and new repo: http://help.github.com/win-set-up-git/
+2. Getting statred: http://www.finalbuilder.com/articles.aspx?ID=33
+
+instructions on using the GitBash to create and add new files to the repo.
+
+3. http://blog.mikepearce.net/2010/05/18/the-difference-between-git-pull-git-fetch-and-git-clone-and-git-rebase/
+
+4. http://help.github.com/remotes/
+
+
+
+
+
+
+
+
