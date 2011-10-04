@@ -17,7 +17,7 @@ this would have created a local Git Repository named "NewProject" with a .git fo
    - go to the local repository folder
    - run the command:
 
-$ git pull https://github.com/duraiselvaa/Sample-MVC.git
+$ git pull git@github.com:duraiselvaa/FirstApp.git
 
 This will fetch the latest code from the HEAD.
 
@@ -27,7 +27,7 @@ remote: Counting objects: 78, done.
 remote: Compressing objects: 100% (59/59), done.
 remote: Total 78 (delta 12), reused 74 (delta 11)
 Unpacking objects: 100% (78/78), done.
-From https://github.com/duraiselvaa/Sample-MVC
+From git@github.com:duraiselvaa/FirstApp.git
  * branch            HEAD       -> FETCH_HEAD
 
 
